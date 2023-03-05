@@ -2,8 +2,13 @@ const form = document.querySelector("#formulario");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  console.log("evento Previnido!");
-  setResultado("Olá Pessoal");
+  const inputPeso = event.target.querySelector("#input1");
+  const inputAltura = event.target.querySelector("#input2");
+
+  const peso = Number(inputPeso.value);
+  const altura = Number(inputAltura.value);
+
+  console.log(peso, altura);
 });
 
 function setResultado() {
