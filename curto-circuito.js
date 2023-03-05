@@ -35,7 +35,7 @@ console.log(corPadrao);
 // Estrutura Condicional
 
 const hora = 06;
-
+ 
 if (hora < 12 && hora >=6) {
   console.log("Bom dia!");
 } else if (hora > 12 && hora <= 17) {
