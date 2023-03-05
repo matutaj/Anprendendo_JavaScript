@@ -1,17 +1,16 @@
 /* -- Avaliação do curto Circuito(short-Circuit) --- ;
 
 && => false && true => false
-
 || => true || false => true
 
+**********************************************
 FALSY
 false
 0
 '' "" ``
 null / undefined
 NaN
-*/
-
+***********************************************/
 // test value of the return whitch &&
 
 function FalaOi() {
@@ -32,3 +31,13 @@ const corUsuario = null;
 const corPadrao = corUsuario || "preto";
 
 console.log(corPadrao);
+
+// Estrutura Condicional
+
+const hora = 11;
+
+if (hora < 12) {
+  console.log("Bom dia!");
+} else if (hora > 12 && hora >= 17) {
+  console.log("Boa noite");
+} else console.log("Boa tarde!");
