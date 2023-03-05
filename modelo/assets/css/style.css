@@ -1,3 +1,35 @@
+:root {
+  --primary-color: rgb(22, 129, 223);
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: red;
+  outline: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+}
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  font-family: "Open sans", sans-serif;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+
+form input,
+form label,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+from input {
+  font-size: 24px;
+  height: 45px;
+  padding: 0 20px;
 }
