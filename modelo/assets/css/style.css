@@ -22,7 +22,14 @@ body {
   line-height: 1.3em;
   border-radius: 10px;
 }
-
+h1 {
+  padding: 20px 5px;
+  font-size: 35px;
+}
+.informacao {
+  display: flex;
+  justify-content: space-around;
+}
 form input,
 form label,
 form button {
