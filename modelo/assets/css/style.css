@@ -1,5 +1,6 @@
 :root {
   --primary-color: rgb(22, 129, 223);
+  --primary-color-darker: rgb(14, 62, 104);
 }
 * {
   margin: 0;
@@ -19,6 +20,7 @@ body {
   font-family: "Open sans", sans-serif;
   font-size: 1.3em;
   line-height: 1.3em;
+  border-radius: 10px;
 }
 
 form input,
@@ -28,8 +30,27 @@ form button {
   width: 100%;
   margin-bottom: 10px;
 }
-from input {
+form input {
   font-size: 24px;
-  height: 45px;
+  height: 50px;
   padding: 0 20px;
+}
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+form button {
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 35px;
+}
+form button:hover {
+  background: var(--primary-color-darker);
+}
+form button:active {
+  background: black;
 }
