@@ -16,13 +16,19 @@ form.addEventListener("submit", function (event) {
     setResultado("adicipone o Valor da altura!");
   }
   const valor = calcularIMC(peso, altura);
-  setResultado(valor);
+  if (valor < 18.5) {
+    setResultado("Abaixo do Peso!");
+  } else if (valor == 18.5 && valor <= 24.9) {
+    setResultado("Peso Normal");
+  } else if (valor == 25 && valor <= 29.9) {
+    setResultado("Sobre Peso!");
+  }
 });
 
 function calcularIMC(p, a) {
-  const imc = p * a;
+  const imc = p / a ** 2;
 
-  return imc;
+  return imc.toFixed(2);
 }
 function setResultado(sms) {
   const resultado = document.querySelector("#resultado");
