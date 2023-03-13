@@ -9,12 +9,21 @@ form.addEventListener("submit", function (event) {
   const altura = Number(inputAltura.value);
 
   if (!peso && !altura) {
-    setResultado("Preencha o valor do peso!");
+    setResultado("Invalido!");
   } else if (!peso && altura) {
     setResultado("Adicione o valor do Peso!");
+  } else if (peso && !altura) {
+    setResultado("adicipone o Valor da altura!");
   }
+  const valor = calcularIMC(peso, altura);
+  setResultado(valor);
 });
 
+function calcularIMC(p, a) {
+  const imc = p * a;
+
+  return imc;
+}
 function setResultado(sms) {
   const resultado = document.querySelector("#resultado");
 
