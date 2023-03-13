@@ -7,15 +7,20 @@ form.addEventListener("submit", function (event) {
 
   const peso = Number(inputPeso.value);
   const altura = Number(inputAltura.value);
-  console.log(peso, altura);
+
+  if (!peso && !altura) {
+    setResultado("Preencha o valor do peso!");
+  } else if (!peso && altura) {
+    setResultado("Adicione o valor do Peso!");
+  }
 });
 
-function setResultado() {
+function setResultado(sms) {
   const resultado = document.querySelector("#resultado");
 
   const p = createP();
-  p.innerHTML = "mau";
-  resultado = p;
+  p.innerHTML = sms;
+  resultado.appendChild(p);
 }
 function createP() {
   const p = document.createElement("p");
