@@ -1,3 +1,5 @@
+//Primeira lógica
+
 // const h1 = document.querySelector(".container");
 // const data = new Date();
 // const diaDaSemana = data.getDay();
@@ -94,6 +96,7 @@
 // h1.innerHTML = apresent;
 
 //Forma bem mais simples
+//segunda Lógica
 
 // const h1 = document.querySelector(".container h1");
 // const data = new Date();
@@ -101,3 +104,55 @@
 //   dataStyle: "full",
 // };
 // h1.innerHTML = data.toLocaleDateString("pt-PT", opcoe);
+
+//Terceira Lógica
+
+const h1 = document.querySelector(".container");
+const data = new Date();
+const diaDaSemana = data.getDay();
+
+const dia = data.getDate();
+const mes = data.getMonth();
+const ano = data.getFullYear();
+const hora = data.getHours();
+
+function listarDiaSemana(diaSemana) {
+  const diasSemana = [
+    "Domingo",
+    "Segunda",
+    "Terça",
+    "Quarta",
+    "Quinta",
+    "Sexta",
+    "Sábado",
+  ];
+
+  return diasSemana[diaSemana];
+}
+
+function listarMes(mes) {
+  const listar = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outobro",
+    "Novembro",
+    "Dezembro",
+  ];
+  return listar[mes];
+}
+const dianaSemana = listarDiaSemana(diaDaSemana);
+const mesNoAno = listarMes(mes);
+
+function apresentarTodo() {
+  return `${dianaSemana}, ${dia}  de  ${mesNoAno} de  ${ano}, ${hora}h`;
+}
+
+const apresent = apresentarTodo();
+h1.innerHTML = apresent;
