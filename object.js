@@ -1,4 +1,4 @@
-let Tenis ={
+/*let Tenis ={
     tipo:"Tenis de corrida",
     cardaco:"G",
     estoque:false,
@@ -30,3 +30,12 @@ let Tenis ={
     }
 }
 console.log(Tenis)
+*/
+
+function Tenis(tamanho, preco){
+    return {
+        tamanho,
+        preco,
+    }
+}
+console.log(Tenis(23, 120.0, ))
