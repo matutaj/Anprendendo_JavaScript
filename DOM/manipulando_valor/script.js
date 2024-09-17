@@ -63,6 +63,7 @@ const fruitArray = ["maca", "morango", "ananás", "abacate"];
 fruitArray.forEach (element =>{
     const li = document.createElement("li");
     li.innerHTML = element;
+    li.style.color = "red"
     fragment.append(li);
 })
 ul.append(fragment)
