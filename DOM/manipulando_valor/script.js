@@ -49,3 +49,20 @@ div.setAttribute("class", "active");
 div.removeAttribute("class")
 console.log(div)
 console.log(div.getAttribute("id"))
+
+
+// ----------------- trabalhando com fragment -------------
+
+// um documento DOM que roda em segundo plano e é chamado para o DOM principal
+
+const ul = document.querySelector("ul");
+const fragment = document.createDocumentFragment();
+
+const fruitArray = ["maca", "morango", "ananás", "abacate"];
+
+fruitArray.forEach (element =>{
+    const li = document.createElement("li");
+    li.innerHTML = element;
+    fragment.append(li);
+})
+ul.append(fragment)
