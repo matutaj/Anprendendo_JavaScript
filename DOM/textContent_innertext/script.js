@@ -28,3 +28,24 @@ numberArray.forEach((element) => {
     elementUl.appendChild(elementLi);
 });
 div.appendChild(elementUl);
+
+
+// -------------------- manipulando a input ----------------------- 
+const input = document.querySelector("#name");
+
+console.log(input.value)
+
+setTimeout(()=>{
+    input.value = "Morango";
+    console.log(input.value);
+}, 1000);
+
+
+// ------------------------ adicionar atributo --------------
+
+div.setAttribute("id", "test");
+div.setAttribute("class", "active");
+
+div.removeAttribute("class")
+console.log(div)
+console.log(div.getAttribute("id"))
