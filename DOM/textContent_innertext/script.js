@@ -20,10 +20,11 @@ const div = document.querySelector("div");
 // criar elemento 
 const elementUl = document.createElement("ul");
 console.log(elementUl)
-const numberArray = [1,2,3];
+const numberArray = ["Matuta","António","Jorge"];
 // addicionando elemento dentro da Ul
 numberArray.forEach((element) => {
     const elementLi = document.createElement("li");
+    elementLi.innerText = element;
     elementUl.appendChild(elementLi);
 });
 div.appendChild(elementUl);
