@@ -18,3 +18,8 @@ p.forEach((element, index)=>{
             element.style.background = "red";
         }
 })
+// pegando a o tamanho da tela
+const largura = window.innerWidth;
+const altura = window.innerHeight;
+
+console.log(`Essa tela tem a largura de ${largura} e tem a altura de ${altura}`)
